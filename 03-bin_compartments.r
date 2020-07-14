@@ -102,6 +102,8 @@ ratio.corrected=gc.correct(ratio, bingc)
 
 AB$short <- short
 AB$long <- long
+AB$ratio <- short/long
+AB$nfrags <- short+long
 AB$short.corrected <- short.corrected
 AB$long.corrected <- long.corrected
 AB$nfrags.corrected <- nfrags.corrected
