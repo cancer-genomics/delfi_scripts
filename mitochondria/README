@@ -1,0 +1,11 @@
+mito-realignment.sh : This script is to run a pipeline to extract reads mapped
+                      to the mitochondria from ELAND bam files, realign them using Bowtie2,
+                      and count the number of fragments aligned to chrM.  This script assumes
+                      "make_galp.R" is in your working directory.
+
+calc_frag_from_galp.R : This script script is to calculate the total number of fragments
+                        in a GAlignmentPairs objects to use as a denominator for the 
+                        number of high quality mitochondrial derived fragments.
+
+summarize.R: Computes the proportion of fragments that are mitochondrial and saves that
+             and other statistics as a text file.
