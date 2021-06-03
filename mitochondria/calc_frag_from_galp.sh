@@ -4,8 +4,7 @@
 #$ -j y
 #$ -l mem_free=14G
 #$ -l h_vmem=14G
-#$ -t 585-599
-#$ -l cancergen
+#$ -t 1-<NUMBER OF SAMPLES>
 
 #-------
 # Input

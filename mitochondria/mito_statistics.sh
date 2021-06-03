@@ -4,8 +4,7 @@
 #$ -j y
 #$ -l mem_free=4G
 #$ -l h_vmem=4G
-#$ -t 585-599
-#$ -l cancergen
+#$ -t 1-<NUMBER OF SAMPLES>
 
 #--------
 # Input
@@ -76,7 +75,7 @@ samtools index $outDir/$sampleName/bt2_bam/${sampleName}_bt2.bam
 mkdir -p $outDir/$sampleName/plots
 mkdir -p $outDir/$sampleName/stats
 
-R_LIBS_USER=$rlib Rscript ./make_galp.R \
+R_LIBS_USER=$rlib Rscript ./mito_statistics.R \
   $outDir/$sampleName/bt2_bam/${sampleName}_bt2.bam \
   $outDir/$sampleName
 #---------------------------------------------------------------------------------------------------

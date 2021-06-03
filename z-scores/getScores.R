@@ -7,7 +7,7 @@ library(fs)
 #--------------------------------------------------------------------------------------------------
 dataDir <- "countReads.R"
 ##
-## User must specify a plain text file providing the names of the non-cancer files created by countReads.R
+## User must specify a plain text file providing the names of the healthy control files created by countReads.R
 ##
 healthyList <- "healthy-list.txt"
 binSize="50kb"
@@ -32,3 +32,4 @@ zscores.loo <- getZscores(bincounts, healthy.index, loo = TRUE)
 sample_names <- basename(binfiles)
 names(zscores.loo) <- gsub(".rds$", "", sample_names)
 saveRDS(zscores.loo, zscore.file)
+#--------------------------------------------------------------------

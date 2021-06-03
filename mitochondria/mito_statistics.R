@@ -44,20 +44,6 @@ if (length(hits) > 0) {
 }
 
 
-p <- ggplot() +
-       geom_density(aes(frag.len)) +
-       theme_bw() +
-       ggtitle(paste0(sampleName, "\n", "Fragments: ", nFrag)) +
-       theme(plot.title = element_text(face = "italic")) +
-       scale_x_continuous(breaks = seq(0,500,50)) +
-       xlim(c(0,500))
-
-setwd(file.path(outDir, "plots"))
-pdf(file.path(outDir, "plots", paste0(sampleName, "_mito_density.pdf")), height = 5, width = 8)
-p
-dev.off()
-
-
 # Calculating the number of MT reads total
 mt.tot <- length(first.m) + length(second.m)
 

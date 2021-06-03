@@ -4,8 +4,6 @@
 #$ -j y
 #$ -l mem_free=16G
 #$ -l h_vmem=16G
-#$ -l h_fsize=250G
-#$ -l h_rt=24:00:00
 
 #----------------------
 # Description of inputs
