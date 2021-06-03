@@ -1,0 +1,10 @@
+The .sh files in this directory were used to submit jobs to a computing cluster and provide a rough idea of the RAM requirements.
+
+countReads.sh:  counts the number of reads in 50kb bin. We submitted this to a cluster for parallelization across each BAM file.  The user should modify the heading as needed for parallelization.
+
+countReads.R:  processes bam files to normalized counts per 50kb bin.  This file is called by countReads.sh.
+  By default, the results are saved will be saved in ./countBins.R/binCounts
+
+getScores.sh: computes z-scores for sample using leave-one-out cross-validation.  This job is not run in parallel, but is a bit slow and possibly RAM intensive.
+
+getScores.R:  R script called by getScores.sh.
